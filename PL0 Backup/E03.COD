@@ -1,0 +1,32 @@
+=== COMPILE PL0 ===
+  0 PROGRAM EX01; 
+  0 VAR A,B,C; 
+  1 BEGIN 
+  2   A:=88; 
+  4   READ(B); 
+  6   IF B<>A THEN 
+***    ^11
+***      ^13
+***        ^23
+***              ^23
+  8       WRITE(B); 
+***           ^10
+ 11   ELSE WRITE(A); 
+***            ^10
+ 14 END. 
+  0  JMP   0   1
+  1  INI   0   6
+  2  LIT   0  88
+  3  STO   0   3
+  4  OPR   0  16
+  5  STO   0   4
+  6  LOD   0   4
+  7  LOD   0   3
+  8  LOD   0   4
+  9  OPR   0  14
+ 10  OPR   0  15
+ 11  LOD   0   3
+ 12  OPR   0  14
+ 13  OPR   0  15
+ 14  OPR   0   0
+ERROR IN PL/0 PROGRAM

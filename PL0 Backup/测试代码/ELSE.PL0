@@ -1,0 +1,11 @@
+var a,b; 
+ begin
+  a:=7;
+  b:=6;
+  if a<b
+  then
+  write(a) 
+  else
+  write(b);
+end.
+ 
